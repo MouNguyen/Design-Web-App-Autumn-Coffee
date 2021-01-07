@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <link
+      rel="icon"
+      href="./resources/image/IconLogo/Icon_Tittle_Autumn_4.png"
+      type="image/png"
+    />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Đăng Nhập - Autumn Coffee</title>
+
+	<!--Bootsrap 4 CDN-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!--Fontawesome CDN-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+  <!--Custom styles-->
+  <link rel="stylesheet" type="text/css" href="../css/reset.css">
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link rel="stylesheet" type="text/css" href="../css/order.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="../js/order.js"></script>
+      <style>
+        a:hover{
+          color: none;
+          text-decoration: none;
+        }
+
+        .navbar-customize{
+          background-color: #130600;
+        }
+        .navbar-customize *{
+          color: #ffec8f;
+
+        }
+        .navbar-customs a:hover{
+          color: #fff;
+        }
+        body{
+          /* background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg'); */
+background-image: url('../image/Signin-Signup/Bg-Login-4.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+/* min-height: 600px; */
+height: 100%;
+        }
+      </style>
+  </head>
+  <body>
+    <header>
+      <div class="navbar-customize">
+        <div class="max-width">
+          <div class="menu-btn">
+            <i class="fas fa-bars"></i>
+          </div>
+          <div class="logo">
+            <a ><span>AUTUMN</span> COFFEE </a>
+            ADMIN
+          </div>
+          <!-- <ul class ="menu">
+						<li><a href="#" class="menu-btn">CHUYỆN CỦA MÙA THU</a></li>
+						<li><a href="#" class="menu-btn">BẢNG TIN</a></li>
+						<li><a href="#" class="menu-btn">TẠP HÓA</a></li>
+						<li><a href="#" class="menu-btn">ƯU ĐÃI</a></li>
+						<li><a href="#" class="menu-btn">CỬA HÀNG</a></li>
+						<li><a href="#" class="menu-btn">LIÊN HỆ</a></li>
+					</ul> -->
+          <div class="menu">
+            <!-- <div  class="header-1">
+              <a href="#">ĐĂNG NHẬP</a>
+            </div> -->
+            <!-- <div class="header-2">
+              <a href="/resources/html/blog.html">BẢNG TIN</a>
+            </div>
+            <div class="header-3">
+              <a href="./product.html">SẢN PHẨM</a>
+            </div>
+            <div class="header-4">
+              <a href="./member-preferences.html">ƯU ĐÃI</a>
+            </div>
+            <div class="header-5">
+              <a href="../../index.html#store">CỬA HÀNG</a>
+            </div>
+            <div class="header-6">
+              <a href="#contact">LIÊN HỆ</a>
+            </div>
+            <div class="header-search">
+              <i class="fa fa-search icon-search" aria-hidden="true"></i>
+              <div class="search-box">
+                <form class="search-form">
+                  <div class="radio-search">
+                    <input type="radio"  id="radio-blog" name="radio-btn-search" value="0" checked>
+                    <label for="radio-blog">Sản Phẩm</label>
+                    <input type="radio" id="radio-product" name="radio-btn-search"  value="1">
+                    <label for="radio-product">Tin Tức</label>
+
+                  </div>
+                  <div class="control-search">
+                  <input type="text" minlength="1" pattern="^[a-zA-Z0-9_.-]*$" placeholder="Nhập Thông Tin" required>
+                  <button class="button-white " id="nav-search">
+                      <i class="fa fa-search">
+                      </i>
+                  </button>
+                  </div>
+              </form>
+               </div>
+            </div> -->
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main >
+      <div class="container">
+        <div class="d-flex justify-content-center h-100 signin" id="signin-form">
+          <div class="card">
+            <div class="card-header">
+              <h3>Đăng Nhập</h3>
+              <div class="d-flex justify-content-end social_icon logo-admin">
+                    <p>ADMIN</p>
+              </div>
+            </div>
+            <div class="card-body">
+              <form>
+                <div class="input-group form-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                  </div>
+                  <input type="text" minlength="1" pattern="[0-9][0-9-_]{9}" class="form-control" placeholder="Nhâp số điện thoại" required>
+
+                </div>
+                <div class="input-group form-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-key"></i></span>
+                  </div>
+                  <!-- ^[a-zA-Z0-9\\- ]{1,16}$ -->
+                  <input type="password" minlength="1" pattern="[a-zA-Z][a-zA-Z0-9-_]{8,32}" class="form-control" placeholder="Nhâp mật khẩu" required>
+                </div>
+                <div class="row align-items-center remember" style="margin-top: 30px;">
+                  <input type="checkbox">Duy trì đăng nhập|
+                  <a href="#">Quên mật khẩu?</a>
+                </div>
+                <div class="form-group"  >
+                  <input type="submit" formaction="../../index-admin.html" value="Đăng Nhập"  style="margin-right: 35%; margin-top: 20px;" class="btn float-right login_btn">
+                </div>
+              </form>
+            </div>
+            <!-- <div class="card-footer" style="margin-top: -100px;">
+              <div class="d-flex justify-content-center fogot-password-admin" style="margin-top: -80px;">
+                <a href="#">Quên mật khẩu?</a>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- <footer id="contact">
+      <div class="footer-content">
+        <section class="footer-logo">
+          <img src="../image/IconLogo/Icon_Tittle_Autumn_5.png" alt="">
+          <div class="logo-name">
+            <span >AUTUMN COFFEE </span>
+          </div>
+
+        </section>
+        <section class="footer-about">
+          <h1>MỤC KHÁC</h1>
+          <a href="../html/story.html">Về Chúng Tôi</a>
+          <a href="#">Cơ Hội Việc Làm</a>
+          <a href="../../index.html#store">Cửa Hàng</a>
+        </section>
+        <section class="footer-social">
+          <h1>KÊNH KẾT NỐI</h1>
+          <div>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </section>
+        <section class="footer-supporter">
+          <h1>HỖ TRỢ</h1>
+          <p>
+              <b>HOT-LINE</b><br><br>
+              +847878 078 078  (07:00-21:00)<br><br>
+              <b>Địa Chỉ</b><br> <br>
+              88 Hồ Tùng Mậu, Quận 1, Hồ Chi Minh, Việt Nam.<br><br>
+              support@autumncoffee.vn<br>
+              </p>
+        </section>
+        <section class="footer-end">
+          <hr class="line-end">
+          <p>© 2020. All Right Reserved. Autumn Coffee</p>
+        </section>
+      </div>
+
+    </footer> -->
+  </body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <link
+          rel="icon"
+          href="../image/IconLogo/Icon_Tittle_Autumn_4.png"
+          type="image/png"
+        />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Quản Lý Sản Phẩm - Sửa Sản Phẩm</title>
+
+        <!--Bootsrap 4 CDN-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+        <!--Fontawesome CDN-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+      <!--Custom styles-->
+      <link rel="stylesheet" type="text/css" href="../css/reset.css">
+      <link rel="stylesheet" type="text/css" href="../css/style.css">
+      <link rel="stylesheet" type="text/css" href="../css/order.css">
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        />
+          <style>
+            a:hover{
+              color: none;
+              text-decoration: none;
+            }
+
+            .navbar-customize{
+              background-color: #130600;
+            }
+            .navbar-customize *{
+              color: #ffec8f;
+
+            }
+            .navbar-customs a:hover{
+              color: #fff;
+            }
+          </style>
+      </head>
+      <body>
+        <header>
+          <div class="navbar-customize">
+            <div class="max-width">
+              <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+              </div>
+              <div class="logo">
+                <a href="../../index-admin.html" ><span>AUTUMN</span> COFFEE </a>
+                ADMIN
+              </div>
+              <!-- <ul class ="menu">
+                            <li><a href="#" class="menu-btn">CHUYỆN CỦA MÙA THU</a></li>
+                            <li><a href="#" class="menu-btn">BẢNG TIN</a></li>
+                            <li><a href="#" class="menu-btn">TẠP HÓA</a></li>
+                            <li><a href="#" class="menu-btn">ƯU ĐÃI</a></li>
+                            <li><a href="#" class="menu-btn">CỬA HÀNG</a></li>
+                            <li><a href="#" class="menu-btn">LIÊN HỆ</a></li>
+                        </ul> -->
+              <div class="menu">
+                <!-- <div  class="header-1">
+                  <a href="#">ĐĂNG NHẬP</a>
+                </div> -->
+                <!-- <div class="header-2">
+                  <a href="/resources/html/blog.html">BẢNG TIN</a>
+                </div>
+                <div class="header-3">
+                  <a href="./product.html">SẢN PHẨM</a>
+                </div>
+                <div class="header-4">
+                  <a href="./member-preferences.html">ƯU ĐÃI</a>
+                </div>
+                <div class="header-5">
+                  <a href="../../index.html#store">CỬA HÀNG</a>
+                </div>
+                <div class="header-6">
+                  <a href="#contact">LIÊN HỆ</a>
+                </div>
+                <div class="header-search">
+                  <i class="fa fa-search icon-search" aria-hidden="true"></i>
+                  <div class="search-box">
+                    <form class="search-form">
+                      <div class="radio-search">
+                        <input type="radio"  id="radio-blog" name="radio-btn-search" value="0" checked>
+                        <label for="radio-blog">Sản Phẩm</label>
+                        <input type="radio" id="radio-product" name="radio-btn-search"  value="1">
+                        <label for="radio-product">Tin Tức</label>
+
+                      </div>
+                      <div class="control-search">
+                      <input type="text" minlength="1" pattern="^[a-zA-Z0-9_.-]*$" placeholder="Nhập Thông Tin" required>
+                      <button class="button-white " id="nav-search">
+                          <i class="fa fa-search">
+                          </i>
+                      </button>
+                      </div>
+                  </form>
+                   </div>
+                </div> -->
+              </div>
+            </div>
+          </nav>
+        </header>
+    <main >
+        <div class="form-popup">
+          <div class="layout-background" onclick="hidePopup()"></div>
+          <div class="popup-logout">
+            <h1>Xác Nhận</h1>
+            <p>Bạn có chắc chắn muốn đăng xuất khỏi tài khoản này không?</p>
+            <button class="btn-logout" onclick="hidePopup()"> <a href="#" onclick="hidePopup()">Không</a> </button>
+            <button class="btn-logout"> <a href="./order.html">Có</a> </button>
+          </div>
+        </div>
+        <div class="container-edit">
+            <div id="Information" class="tabcontent" >
+                <!-- <div class="banner-account" style=""><img src="../image/Signin-Signup/Bg-Login-4.jpg" alt=""></div> -->
+                <div class="container-info" style="top: 120px;">
+                    <div class="content-info" style="width: 40%; margin-left: 28%; height: 400px;">
+                    <form class="avatar" action="">
+                      <img src="../image/Menu/Tra-Trai-Cay/tra_dao_5f3925d9bfca4d0abc17f95b05fff5f7_large.jpg" alt=""
+                      style="border:1px groove rgba(0, 16, 104,0.5); border-radius: 3px">
+                      <label class="fileContainer">
+                        <i class="fas fa-camera" style="columns: #000000;"></i>
+                        <input type="file"/>
+                    </label>
+                    </form>
+                    <form action="" class="info-customer">
+                        <section class="id"> <label for="">Mã sản phẩm</label><input type="text" value="TTC001"  readonly></input></section>
+                      <section class="name"><label for="">Tên sản phẩm</label><input value="Trà đào cam sả" type="text" minlength="1" pattern="[a-zA-Z][a-zA-Z0-9-_]{8,32}"  placeholder="Nhập tên sản phẩm"></input></section>
+
+                      <section class="gender">
+                        <label for="">Loại sản phẩm</label>
+                        <select>
+                            <option>Cà Phê Máy</option>
+                            <option>Cà Phê Việt Nam</option>
+                            <option>Matcha-Socola</option>
+                            <option>Trà Trái Cây</option>
+                            <option>Thức Uống Trái Cây</option>
+                        </select>
+                      </section>
+          <section class="address"><label for="">Giá</label><input type="number" placeholder="Nhập giá" value="50000" step="1000"></section>
+                    </form>
+                    </div>
+                </div>
+                <div class="container-save" style="margin-top: -20px;">
+                  <button  class="btn-save-info" style="z-index: 9999999;">
+                    <a href="../../index-admin.html"> LƯU THAY ĐỔI</a>
+                      </button>
+                    </div>
+            </div>
+        </div>
+    </main>
+  </body>
+</html>

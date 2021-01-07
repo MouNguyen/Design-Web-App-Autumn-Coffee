@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <link
+      rel="icon"
+      href="./resources/image/IconLogo/Icon_Tittle_Autumn_4.png"
+      type="image/png"
+    />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Giỏ Hàng - Autumn Coffee</title>
+
+	<!--Bootsrap 4 CDN-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!--Fontawesome CDN-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <!-- DataTables -->
+  <link rel="stylesheet"
+    type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+  <script type="text/javascript"
+    charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js">
+  </script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <!-- DataTables -->
+
+   <!-- <script type="text/javascript"
+     charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js">
+   </script> -->
+<script src="../js/order.js"></script>
+  <!--Custom styles-->
+  <link rel="stylesheet" type="text/css" href="../css/reset.css">
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link rel="stylesheet" type="text/css" href="../css/order.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+
+      <style>
+        a:hover{
+          color: none;
+          text-decoration: none;
+        }
+
+        .navbar-customize{
+          background-color: #130600;
+        }
+        .navbar-customize *{
+          color: #ffec8f;
+
+        }
+        .navbar-customs a:hover{
+          color: #fff;
+        }
+        .header-1 > a:hover:after {
+            width: 0;
+        }
+      </style>
+     <script>
+        $(window).on('beforeunload', function(){
+            $(window).scrollTop(275);
+        });
+        </script>
+  </head>
+  <body>
+    <header>
+      <div class="navbar-customize">
+        <div class="max-width">
+          <div class="menu-btn">
+            <i class="fas fa-bars"></i>
+          </div>
+          <div class="logo">
+            <a href="../../index.html#home"><span>AUTUMN</span> COFFEE </a>
+          </div>
+          <!-- <ul class ="menu">
+						<li><a href="#" class="menu-btn">CHUYỆN CỦA MÙA THU</a></li>
+						<li><a href="#" class="menu-btn">BẢNG TIN</a></li>
+						<li><a href="#" class="menu-btn">TẠP HÓA</a></li>
+						<li><a href="#" class="menu-btn">ƯU ĐÃI</a></li>
+						<li><a href="#" class="menu-btn">CỬA HÀNG</a></li>
+						<li><a href="#" class="menu-btn">LIÊN HỆ</a></li>
+					</ul> -->
+          <div class="menu">
+            <div  class="header-1 header-avatar" >
+                <a href="./user-customer.html">
+                <img src="../image/Signin-Signup/avatar.jpg" alt="">
+            </a>
+            </div>
+            <div class="header-username">
+              <a href="./user-customer.html">Mou Nguyen</a>
+            </div>
+            <!-- <div class="header-2">
+              <a href="/resources/html/blog.html">BẢNG TIN</a>
+            </div>
+            <div class="header-3">
+              <a href="./product.html">SẢN PHẨM</a>
+            </div>
+            <div class="header-4">
+              <a href="./member-preferences.html">ƯU ĐÃI</a>
+            </div>
+            <div class="header-5">
+              <a href="../../index.html#store">CỬA HÀNG</a>
+            </div>
+            <div class="header-6">
+              <a href="#contact">LIÊN HỆ</a>
+            </div>
+            <div class="header-search">
+              <i class="fa fa-search icon-search" aria-hidden="true"></i>
+              <div class="search-box">
+                <form class="search-form">
+                  <div class="radio-search">
+                    <input type="radio"  id="radio-blog" name="radio-btn-search" value="0" checked>
+                    <label for="radio-blog">Sản Phẩm</label>
+                    <input type="radio" id="radio-product" name="radio-btn-search"  value="1">
+                    <label for="radio-product">Tin Tức</label>
+
+                  </div>
+                  <div class="control-search">
+                  <input type="text" minlength="1" pattern="^[a-zA-Z0-9_.-]*$" placeholder="Nhập Thông Tin" required>
+                  <button class="button-white " id="nav-search">
+                      <i class="fa fa-search">
+                      </i>
+                  </button>
+                  </div>
+              </form>
+               </div>
+            </div> -->
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main style="    background: rgb(250, 246, 246);">
+        <!-- layout banner-->
+        <div class="banner-product"></div>
+        <div class="form-popup">
+            <div class="layout-background-cart" onclick="hidePopupCart()"></div>
+            <div class="popup-cart">
+                <div class="product-cart-popup">
+                    <img src="../image/Menu/Tra-Trai-Cay/tra_dao_5f3925d9bfca4d0abc17f95b05fff5f7_large.jpg" alt="">
+                    <section>
+                        <h1>TRÀ ĐÀO CAM SẢ (M)</h1>
+                        <h3>55,000đ</h3>
+                        <div class="btn-amount-product btn-amount-cart">
+                            <button class="minus"> -</button>
+                            <p>1</p>
+                            <button class="bonus">+</button>
+
+                        </div>
+                        <button class="btn-price-cart" onclick="hidePopupCart()">+ 55,000đ</button>
+
+                    </section>
+                </div>
+                <div class="topping-cart">
+                    <div>
+                    <form action="" class="frm-topping">
+                        <label for="">Chọn size</label>
+                        <select name="" id="topping-size">
+                            <option value="S">Size S</option>
+                            <option value="M" selected="selected">Size M</option>
+                            <option value="L">Size L</option>
+                        </select>
+                        <label for="">Chọn đường</label>
+                        <select name="" id="topping-sugar"  >
+                            <option value="20">20% đường</option>
+                            <option value="50">50% đường</option>
+                            <option value="70">70% đường</option>
+                            <option value="100" selected="selected">100% đường</option>
+                        </select>
+                        <label for="">Chọn đá</label>
+                        <select name="" id="topping-ice">
+                            <option value="20">20% đá</option>
+                            <option value="50">50% đá</option>
+                            <option value="70">70% đá</option>
+                            <option value="100" selected="selected">100% đá</option>
+                        </select>
+                        <label for="">Chọn topping</label>
+                        <div class="choose-topping">
+                            <div class="topping-add-1 topping-add">
+                                <input type="checkbox" id="topping-1" name="topping-1" value="001">
+                                <label for="topping-1"> Trân châu Baby </label>
+                                <p>+ 8,000đ</p>
+                              </div>
+                              <div class="topping-add-2 topping-add">
+                                <input type="checkbox" id="topping-2" name="topping-2" value="002">
+                                <label for="topping-1"> Pudding hạnh nhân </label>
+                                <p>+ 10,000đ</p>
+                            </div>
+                        </div>
+                    </form>
+                    </div>
+                </div>
+            </div>
+          </div>
+        <!-- layout menu -->
+        <div class="menu-product menu-order">
+        <div class="filter-product-page">
+            <form class="form-menu-filter outline">
+              <h4 class="heading">TÊN SẢN PHẨM</h4>
+              <input type="text" placeholder="Nhập tên sản phẩm">
+                <h4 class="heading">LOẠI SẢN PHẨM</h4>
+                <select>
+                  <option>-Tất Cả Sản Phẩm-</option>
+                  <option>Nổi Bật</option>
+                  <option>Cà Phê Máy</option>
+                  <option>Cà Phê Việt Nam</option>
+                  <option>Matcha-Socola</option>
+                  <option>Trà Trái Cây</option>
+                  <option>Thức Uống Trái Cây</option>
+              </select>
+              <h4 class="heading">GIÁ (VND)</h4>
+              <label>TỪ<input type="number" value="10000" min="10000" step="5000"></label>
+              <label>ĐẾN<input type="number" value="150000" min="150000" step="5000"></label>
+              <button class="btn-filter-menu btn btn-filter-order "> <a href="#">LỌC </a> </button>
+            </form>
+        </div>
+        <div class="product-page list-layout max-width">
+          <div class="product-page-header">
+            <div class="product-page-tittle list-tittle">
+              <p>NỔI BẬT</p>
+            </div>
+          </div>
+          <div class="product-page-content">
+              <!----------------------1------------------------->
+              <div class="product-page-content_1 product">
+                <div class="picture-product-page">
+                  <a >
+                  <img
+                    src="../image/Menu/Coffee-VietNam/cf_da_copy_a33d6e77f8da405bba9da541744dcea9_large.webp"
+                    alt=""
+                  />
+                </a>
+                </div>
+                <div class="tittle-product-page">
+                  <a  >CÀ PHÊ ĐÁ</a>
+                </div>
+                <div class="price order-card-footer" >
+                  <p>35.000 Đ</p>
+                  <button class="btn-order" onclick="showPopupCart()">
+                    <a onclick="showPopupCart()" > +</a>
+                  </button>
+                </div>
+              </div>
+              <!----------------------2------------------------->
+              <div class="product-page-content_2 product">
+                <div class="picture-product-page">
+                  <a>
+                  <img
+                    src="../image/Menu/Coffee-VietNam/bac_siu_099c749a7d6044bc9f7f0eac7f57808f_large.webp"
+                    alt=""
+                  />
+                </a>
+                </div>
+                <div class="tittle-product-page">
+                  <a>BẠC SỈU</a>
+                </div>
+                <div class="price order-card-footer">
+                    <p>55.000 Đ</p>
+                    <button class="btn-order" onclick="showPopupCart()">
+                        <a onclick="showPopupCart()" > +</a>
+                      </button>
+                  </div>
+              </div>
+              <!----------------------3------------------------->
+              <div class="product-page-content_3 product">
+                <div class="picture-product-page">
+                  <a >
+                  <img
+                    src="../image/Menu/Coffee-VietNam/cfsd_615a3cb2b1e342d2b1986bfeb6572070_large.webp"
+                    alt=""
+                  />
+                </a>
+                </div>
+                <div class="tittle-product-page">
+                  <a>CÀ PHÊ SỮA</a>
+                </div>
+                <div class="price order-card-footer">
+                    <p>50.000 Đ</p>
+                    <button class="btn-order" onclick="showPopupCart()">
+                        <a onclick="showPopupCart()" > +</a>
+                      </button>
+                  </div>
+              </div>
+              <!----------------------4------------------------->
+              <div class="product-page-content_4 product">
+                <div class="picture-product-page">
+                  <a >
+                  <img
+                    src="../image/Menu/Matcha-Socola/chocolate_ice_blended_45497439e5ea4aa980b8c63078608a2d_large.webp"
+                    alt=""
+                  />
+                </a>
+                </div>
+                <div class="tittle-product-page">
+                  <a >SÔ-CÔ-LA ĐÁ</a>
+                </div>
+                <div class="price order-card-footer">
+                    <p>55.000 Đ</p>
+                    <button class="btn-order" onclick="showPopupCart()">
+                        <a onclick="showPopupCart()" > +</a>
+                      </button>
+                  </div>
+              </div>
+              <!----------------------5------------------------->
+              <div class="product-page-content_5 product">
+                <div class="picture-product-page">
+                  <a >
+                  <img
+                    src="../image/Menu/Matcha-Socola/matchadaxay_5d6b255ccee94330b847b6ed3fece40c_large.webp"
+                    alt=""
+                  />
+                </a>
+                </div>
+                <div class="tittle-product-page">
+                  <a>MATCHA ĐÁ XÂY</a>
+                </div>
+                <div class="price order-card-footer">
+                    <p>65.000 Đ</p>
+                    <button class="btn-order" onclick="showPopupCart()">
+                        <a onclick="showPopupCart()" > +</a>
+                      </button>
+                  </div>
+              </div>
+              <!----------------------6------------------------->
+              <div class="product-page-content_6 product">
+                <div class="picture-product-page">
+                  <a >
+                  <img
+                    src="../image/Menu/Thuc-Uong-Trai-Cay/sinh-to-viet-quoc_bd95abd5bf84451e8ee0c8cef031432c_large.webp"
+                    alt=""
+                  />
+                </a>
+                </div>
+                <div class="tittle-product-page">
+                  <a >SINH TỐ VIỆT QUỐC</a>
+                </div>
+                <div class="price order-card-footer">
+                    <p>50.000 Đ</p>
+                    <button class="btn-order" onclick="showPopupCart()">
+                        <a onclick="showPopupCart()" > +</a>
+                      </button>
+                  </div>
+              </div>
+
+            </div>
+
+                    <!-- Pagination -->
+          <form class=" pagination-order">
+              <button class="btn-pagination-order btn">
+                   <a href="#"> Trang Đầu </a>
+              </button>
+              <button  class="btn-pagination-order btn">
+                  <a href="#">Trước </a></button>
+              <button  class="btn-pagination-order btn">
+                  <a href="#">1 </a>
+              </button>
+              <button  class="btn-pagination-order btn">
+                  <a href="#">2 </a>
+              </button>
+              <button  class="btn-pagination-order btn">
+                  <a href="#">3 </a>
+              </button>
+              <button  class="btn-pagination-order btn">
+                  <a href="#">Sau </a></button>
+              <button  class="btn-pagination-order btn">
+                  <a href="#">Trang Cuối </a>
+              </button>
+          </form>
+          </div>
+          <div class="cart">
+            <div class="container-cart">
+              <div class="header-cart">
+                  <h1>Giỏ Hàng Của Tôi</h1>
+                  <button class="btn-delete-all-cart">Xóa tất cả</button>
+              </div>
+              <div class="body-cart">
+                  <section>
+                      <h1>Cà Phê Đá</h1>
+                      <p>size M, 100% đá, 100% đường</p>
+                  </section>
+                  <div class="btn-amount-product">
+                      <button class="minus"> -</button>
+                      <p>2</p>
+                      <button class="bonus">+</button>
+                  </div>
+              </div>
+              <div class="footer-cart">
+                  <div class="total-price">
+                      <img src="../image/Order-cart/icon-glass-tea.png" alt="">
+                      <p> x <span>2</span> = <span> 70,000 đ</span></p>
+                  </div>
+                  <button  class="paypal" > <a href="./payment.html" style="color:#fff"> ĐẶT HÀNG</a></button>
+              </div>
+
+            </div>
+          </div>
+      </div>
+
+      </main>
+    <footer id="contact">
+      <div class="footer-content">
+        <section class="footer-logo">
+          <img src="../image/IconLogo/Icon_Tittle_Autumn_5.png" alt="">
+          <div class="logo-name">
+            <span >AUTUMN COFFEE </span>
+          </div>
+
+        </section>
+        <section class="footer-about">
+          <h1>MỤC KHÁC</h1>
+          <a href="../html/story.html">Về Chúng Tôi</a>
+          <a href="#">Cơ Hội Việc Làm</a>
+          <a href="../../index.html#store">Cửa Hàng</a>
+        </section>
+        <section class="footer-social">
+          <h1>KÊNH KẾT NỐI</h1>
+          <div>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </section>
+        <section class="footer-supporter">
+          <h1>HỖ TRỢ</h1>
+          <p>
+              <b>HOT-LINE</b><br><br>
+              +847878 078 078  (07:00-21:00)<br><br>
+              <b>Địa Chỉ</b><br> <br>
+              88 Hồ Tùng Mậu, Quận 1, Hồ Chi Minh, Việt Nam.<br><br>
+              support@autumncoffee.vn<br>
+              </p>
+        </section>
+        <section class="footer-end">
+          <hr class="line-end">
+          <p>© 2020. All Right Reserved. Autumn Coffee</p>
+        </section>
+      </div>
+
+    </footer>
+  </body>
+</html>
